@@ -31,20 +31,26 @@ Qt module used :
 - widgets
 - webenginewidgets (Qt > 5.6) or webkitwidgets (Qt < 5.6) or a lite support for web
 
+Type this line to install the dependecies on ubuntu :
+
 ```
 sudo apt install g++ qtbase5-dev qttools5-dev libqt5webkit5-dev 
 ```
 
-
-## Build on linux OS
+## Build
 
 ```
 mkdir build
 cd build
+qmake ../src/
+make -j 4 
+```
+
+Do not forget to initialize the submodules by typing
+
+```
 git submodule init
 git submodule update
-qmake ../src/
-make -j
 ```
 
 Binaries will be placed in `bin/` directory.

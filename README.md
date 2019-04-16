@@ -31,12 +31,19 @@ Qt module used :
 - widgets
 - webenginewidgets (Qt > 5.6) or webkitwidgets (Qt < 5.6) or a lite support for web
 
-## Build
+```
+sudo apt install g++ qtbase5-dev qttools5-dev libqt5webkit5-dev 
+```
+
+
+## Build on linux OS
 
 ```
 mkdir build
 cd build
-qmake ../src
+git submodule init
+git submodule update
+qmake ../src/
 make -j
 ```
 
